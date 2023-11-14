@@ -1,0 +1,616 @@
+.spain-2 div, .spain-1 div, .transition-icons-container div, .section-heading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+footer .icons-container, .tourists-say .tourists-say-container, .transition-icons-container, .why-choose-container, header ul, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.spain-2 div button, .spain-1 div button, .why-choose button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #5373fd;
+  width: 13.313rem;
+  height: 3.75rem;
+  background-color: #5373fd;
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+body {
+  color: #fff;
+  overflow-x: hidden;
+}
+
+section,
+header {
+  padding-left: 18.75rem;
+  padding-right: 18.75rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-heading {
+  background: url("../images/mountains.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-heading-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section-heading-container h1 {
+  font-family: "Josefin Sans";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  text-transform: uppercase;
+  margin-top: 18.438rem;
+  margin-bottom: 0.5rem;
+}
+.section-heading-container h4 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 7px;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+.section-heading-container div {
+  text-align: center;
+}
+.section-heading-container div:nth-of-type(2) {
+  background-color: #fff;
+  height: 3.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  margin-bottom: 13.188rem;
+}
+.section-heading-container div:nth-of-type(2) input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #fff;
+  padding: 1rem 2.25rem;
+  font-family: "Josefin Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  background-color: #fff;
+  outline: none;
+  width: 91%;
+}
+.section-heading-container div:nth-of-type(2) input::-webkit-input-placeholder {
+  font-size: 0.875rem;
+  letter-spacing: 2.8px;
+}
+.section-heading-container div:nth-of-type(2) input::-moz-placeholder {
+  font-size: 0.875rem;
+  letter-spacing: 2.8px;
+}
+.section-heading-container div:nth-of-type(2) input:-ms-input-placeholder {
+  font-size: 0.875rem;
+  letter-spacing: 2.8px;
+}
+.section-heading-container div:nth-of-type(2) input::-ms-input-placeholder {
+  font-size: 0.875rem;
+  letter-spacing: 2.8px;
+}
+.section-heading-container div:nth-of-type(2) input::placeholder {
+  font-size: 0.875rem;
+  letter-spacing: 2.8px;
+}
+.section-heading-container div:nth-of-type(2) button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.75rem;
+  border: 1px solid #5373fd;
+  background-color: #5373fd;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  height: 3.25rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-right: 0.313rem;
+  font-family: "Aleo";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.section-heading-container div:nth-of-type(2) button svg {
+  width: 16px;
+  height: 16px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+.section-heading-container div:nth-of-type(3) {
+  margin-bottom: 7.5rem;
+}
+.section-heading-container div:nth-of-type(3) p {
+  font-family: "Josefin Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 2.8px;
+  margin-bottom: 0.25rem;
+}
+.section-heading-container div:nth-of-type(3) svg {
+  width: 14px;
+  height: 16px;
+  -webkit-animation-name: chevron;
+          animation-name: chevron;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes chevron {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes chevron {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+header {
+  height: 5.25rem;
+  background-color: #5373fd;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+header p {
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+header ul {
+  gap: 2.5rem;
+  margin: 0;
+}
+header ul li {
+  list-style-type: none;
+  font-family: "Aleo";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.why-choose {
+  background: url("../images/bridge.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 7.75rem;
+}
+.why-choose h2 {
+  font-family: "Aleo";
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+  margin-top: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+.why-choose p {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 1.6px;
+}
+.why-choose p:first-of-type {
+  margin-bottom: 2rem;
+}
+.why-choose-container {
+  gap: 7.875rem;
+}
+.why-choose-container div:first-of-type {
+  width: 88%;
+}
+.why-choose-images {
+  margin-bottom: 7.75rem;
+}
+.why-choose-images img:first-of-type {
+  float: left;
+}
+.why-choose-images img:last-of-type {
+  margin-top: 1rem;
+  width: 21.875rem;
+  height: 13.75rem;
+  float: right;
+}
+
+.bg-color-container {
+  background-color: #333333;
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+}
+
+.transition-icons-container {
+  gap: 1.563rem;
+  padding-top: 10.438rem;
+  padding-bottom: 3.688rem;
+  position: relative;
+}
+.transition-icons-container div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.transition-icons-container h2 {
+  margin-top: 0.25rem;
+}
+.transition-icons-container svg {
+  width: 64px;
+  height: 64px;
+  margin: 1rem;
+}
+.transition-icons-container > img {
+  position: absolute;
+  width: 80%;
+  top: 100px;
+  left: 0;
+  right: 12px;
+  margin: 0 auto;
+  display: block;
+}
+.transition-icons-container .circle {
+  width: 96px;
+  height: 96px;
+  background-color: #333333;
+  border-radius: 48px;
+}
+.transition-icons-container div:nth-of-type(1) {
+  position: relative;
+}
+.transition-icons-container div:nth-of-type(1) svg {
+  -webkit-filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
+          filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
+}
+.transition-icons-container div:nth-of-type(2) {
+  position: relative;
+}
+.transition-icons-container div:nth-of-type(2) svg {
+  -webkit-filter: invert(38%) sepia(15%) saturate(2213%) hue-rotate(312deg) brightness(134%) contrast(106%);
+          filter: invert(38%) sepia(15%) saturate(2213%) hue-rotate(312deg) brightness(134%) contrast(106%);
+}
+.transition-icons-container div:nth-of-type(3) {
+  position: relative;
+}
+.transition-icons-container div:nth-of-type(3) svg {
+  -webkit-filter: invert(43%) sepia(74%) saturate(2800%) hue-rotate(179deg) brightness(106%) contrast(104%);
+          filter: invert(43%) sepia(74%) saturate(2800%) hue-rotate(179deg) brightness(106%) contrast(104%);
+}
+
+.spain-1 {
+  background: url("../images/hotel.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+  padding-top: 13.75rem;
+  padding-bottom: 7.5rem;
+}
+.spain-1 div {
+  width: 49%;
+  background: rgba(35, 35, 35, 0.9);
+  gap: 1rem;
+  padding: 2.75rem 2rem;
+}
+.spain-1 div > * {
+  margin: 0;
+}
+.spain-1 div h6 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  letter-spacing: 2px;
+}
+.spain-1 div h5 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+.spain-1 div p {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 1.6px;
+}
+.spain-1 div button {
+  margin: 0.5rem;
+}
+
+.spain-2 {
+  background: url("../images/rocks.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+  padding-top: 13.75rem;
+  padding-bottom: 7.5rem;
+}
+.spain-2 div {
+  width: 49%;
+  background: rgba(35, 35, 35, 0.9);
+  gap: 1rem;
+  padding: 2.75rem 2rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+.spain-2 div > * {
+  margin: 0;
+}
+.spain-2 div h6 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  letter-spacing: 2px;
+}
+.spain-2 div h5 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+.spain-2 div p {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 1.6px;
+}
+.spain-2 div button {
+  margin: 0.5rem;
+}
+
+.tourists-say {
+  background: url("../images/man-on-the-rock.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 7.5rem;
+  padding-bottom: 11.25rem;
+}
+.tourists-say h2 {
+  font-family: "Aleo";
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 3.75rem;
+}
+.tourists-say .tourists-say-container {
+  gap: 3.75rem;
+  height: 17.5rem;
+  background-color: #333333;
+}
+.tourists-say .tourists-say-info {
+  padding: 3rem 4.063rem 3rem 0;
+}
+.tourists-say .tourists-say-info h5 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.tourists-say .tourists-say-info p {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 1.6px;
+  margin: 0;
+}
+.tourists-say .tourists-say-info svg {
+  position: relative;
+  left: 0;
+  top: -3px;
+  margin-right: 0.875rem;
+  width: 20px;
+  height: 20px;
+  -webkit-filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
+          filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
+}
+
+footer {
+  background-color: #000;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+footer p:nth-of-type(1) {
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+footer p:nth-of-type(2) {
+  font-family: "Josefin Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 2.8px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+footer .icons-container {
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .icons-container svg {
+  height: 32px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+footer .icons-container svg:nth-of-type(1) {
+  width: 20px;
+}
+footer .icons-container svg:nth-of-type(2) {
+  width: 32px;
+}
+footer .icons-container svg:nth-of-type(3) {
+  width: 28px;
+}
+footer .icons-container svg:nth-of-type(4) {
+  width: 36px;
+}
+footer .icons-container svg:nth-of-type(5) {
+  width: 31px;
+}
+footer .icons-container svg:hover {
+  -webkit-filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
+          filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
+}
+
+@media screen and (min-width: 1200px) {
+  section,
+  header {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .section-heading-container h1 {
+    margin-top: 13.5rem;
+  }
+  .section-heading-container h4 {
+    margin-bottom: 2.5rem;
+  }
+  .section-heading-container div:nth-of-type(2) {
+    width: 55%;
+    margin-bottom: 10.5rem;
+  }
+  .section-heading-container div:nth-of-type(3) {
+    margin-bottom: 6rem;
+  }
+  .why-choose-container {
+    gap: 7.563rem;
+  }
+  .tourists-say .tourists-say-container {
+    height: 18.75rem;
+  }
+  .tourists-say .tourists-say-container img {
+    width: 35%;
+  }
+  .tourists-say .tourists-say-container .tourists-say-info {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 3.75rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  section,
+  header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .section-heading-container div:nth-of-type(2) {
+    width: 70%;
+  }
+  .why-choose-container {
+    gap: 1.313rem;
+  }
+  .why-choose-container div:first-of-type {
+    width: 100%;
+  }
+  .why-choose-container .bg-color-container {
+    margin: 0 -64rem;
+    padding: 0 64rem;
+  }
+  .transition-icons-container .circle h2 {
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+}
