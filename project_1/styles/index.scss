@@ -5,7 +5,15 @@
 
 body {
   color: $primary-color;
-  overflow-x: hidden;
+}
+
+#dropdown {
+  display: none;
+}
+.alignment-helper {
+  display: none;
+  visibility: none;
+  width: 40px;
 }
 
 section,
@@ -50,7 +58,7 @@ header {
     height: 3.75rem;
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 60%;
     margin-bottom: 13.188rem;
 
     input {
@@ -85,12 +93,18 @@ header {
       @include aleo;
       letter-spacing: 1.4px;
       text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
 
       svg {
         width: 16px;
         height: 16px;
         filter: invert(1);
       }
+    }
+
+    button:hover {
+      background-color: #9eb0fd;
+      border: 1px solid #9eb0fd;
     }
   }
 
@@ -131,6 +145,16 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
 
+  .hamburger {
+    display: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .hamburger input[type="checkbox"] {
+    appearance: none;
+  }
+
   p {
     @include josefin($font-size: 1.5rem, $font-weight: 700);
     letter-spacing: 2.4px;
@@ -148,6 +172,25 @@ header {
       @include aleo;
       letter-spacing: 1.4px;
       text-transform: uppercase;
+      position: relative;
+      cursor: pointer;
+    }
+
+    li::after {
+      content: "";
+      border-bottom: 1px solid $primary-color;
+      position: absolute;
+      width: 70%;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: none;
+      transition: 0.3s;
+    }
+
+    li:hover::after {
+      display: block;
     }
   }
 }
@@ -158,6 +201,11 @@ header {
 
   button {
     @extend %a-button;
+  }
+
+  button:hover {
+    background-color: #9eb0fd;
+    border: 1px solid #9eb0fd;
   }
 
   h2 {
@@ -202,8 +250,9 @@ header {
 
 .bg-color-container {
   background-color: $color-background;
-  margin: 0 -9999rem;
-  padding: 0 9999rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .transition-icons-container {
@@ -219,6 +268,7 @@ header {
   }
 
   h2 {
+    @include aleo($font-size: 2.25rem, $line-height: 2.5rem);
     margin-top: 0.25rem;
   }
 
@@ -304,7 +354,12 @@ header {
 
     button {
       @extend %a-button;
-      margin: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #9eb0fd;
+      border: 1px solid #9eb0fd;
     }
   }
 }
@@ -345,7 +400,12 @@ header {
 
     button {
       @extend %a-button;
-      margin: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #9eb0fd;
+      border: 1px solid #9eb0fd;
     }
   }
 }
@@ -368,8 +428,12 @@ header {
   .tourists-say-container {
     @extend %flex-row;
     gap: 3.75rem;
-    height: 17.5rem;
+    min-height: 17.5rem;
     background-color: $color-background;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   .tourists-say-info {
@@ -461,7 +525,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
   section,
   header {
     padding-left: 6.875rem;
@@ -470,17 +534,12 @@ footer {
   }
 
   .section-heading-container {
-    h1 {
-      margin-top: 13.5rem;
-    }
-
     h4 {
       margin-bottom: 2.5rem;
     }
 
     div:nth-of-type(2) {
-      width: 55%;
-      margin-bottom: 10.5rem;
+      width: 60%;
     }
 
     div:nth-of-type(3) {
@@ -494,9 +553,18 @@ footer {
     }
   }
 
+  .spain-1,
+  .spain-2 {
+    div {
+      button {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
   .tourists-say {
     .tourists-say-container {
-      height: 18.75rem;
+      height: 19.25rem;
       img {
         width: 35%;
       }
@@ -519,7 +587,7 @@ footer {
 
   .section-heading-container {
     div:nth-of-type(2) {
-      width: 70%;
+      width: 60%;
     }
   }
 
@@ -530,11 +598,6 @@ footer {
       div:first-of-type {
         width: 100%;
       }
-
-      .bg-color-container {
-        margin: 0 -64rem;
-        padding: 0 64rem;
-      }
     }
   }
 
@@ -543,6 +606,296 @@ footer {
       h2 {
         margin-left: 1.875rem;
         margin-right: 1.875rem;
+      }
+    }
+  }
+
+  .spain-1,
+  .spain-2 {
+    div {
+      button {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .tourists-say {
+    .tourists-say-container {
+      height: 21rem;
+
+      img {
+        width: 34%;
+      }
+
+      .tourists-say-info {
+        padding-right: 3.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  section,
+  header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .section-heading-container {
+    div:nth-of-type(2) {
+      width: 90%;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: 8.5rem;
+
+    ul {
+      padding-left: 0;
+    }
+  }
+
+  .why-choose {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+
+    &-container {
+      flex-direction: column-reverse;
+      gap: 2rem;
+
+      div:first-of-type {
+        text-align: center;
+        width: 100%;
+
+        p:last-of-type {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    &-images {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+      gap: 1.5rem;
+
+      img {
+        flex: 1 1 0;
+        min-width: 0%;
+        object-fit: cover;
+      }
+
+      img:last-of-type {
+        margin: 0;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  .bg-color-container {
+    .transition-icons-container {
+      flex-direction: column;
+      gap: 3.75rem;
+      padding-top: 3.75rem;
+      padding-bottom: 3.75rem;
+      img {
+        display: none;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .spain-1,
+  .spain-2 {
+    div {
+      width: 91%;
+    }
+  }
+
+  .tourists-say {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+    .tourists-say-container {
+      flex-direction: column;
+      gap: 0;
+
+      img {
+        max-height: 21rem;
+      }
+
+      .tourists-say-info {
+        padding-left: 3.75rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  section,
+  header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  span {
+    display: none;
+  }
+
+  .section-heading-container {
+    div:nth-of-type(2) {
+      width: 90%;
+    }
+  }
+  .alignment-helper {
+    display: block;
+  }
+  header {
+    justify-content: space-between;
+    height: 5.25rem;
+    position: relative;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav {
+      display: none;
+      background-color: $button-color;
+      position: absolute;
+      top: 5.25rem;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      text-align: center;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      transition: height 0.5s ease-in-out;
+      padding-bottom: 2rem;
+
+      ul {
+        padding-left: 0;
+        flex-direction: column;
+      }
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .icon-x {
+      display: none;
+    }
+
+    div:nth-child(3) > input:checked ~ div.hamburger > label > .burger {
+      margin-top: 1rem;
+      height: 8.25rem;
+      display: none;
+    }
+
+    div:nth-child(3) > input:checked ~ .hamburger > label > .icon-x {
+      display: inline-block;
+    }
+
+    div:nth-child(3) > input:checked ~ nav {
+      display: flex !important;
+      height: max-content;
+    }
+  }
+
+  .why-choose {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+
+    &-container {
+      flex-direction: column-reverse;
+      gap: 2rem;
+
+      div:first-of-type {
+        text-align: center;
+        width: 100%;
+
+        p:last-of-type {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    &-images {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+      gap: 1.5rem;
+
+      img {
+        flex: 1 1 0;
+        min-width: 0%;
+        object-fit: cover;
+      }
+
+      img:last-of-type {
+        margin: 0;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  .bg-color-container {
+    .transition-icons-container {
+      flex-direction: column;
+      gap: 3.75rem;
+      padding-top: 3.75rem;
+      padding-bottom: 3.75rem;
+      img {
+        display: none;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .spain-1,
+  .spain-2 {
+    div {
+      width: initial;
+      justify-content: center;
+    }
+  }
+
+  .tourists-say {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+    .tourists-say-container {
+      flex-direction: column;
+      gap: 0;
+
+      img {
+        max-height: 21rem;
+      }
+
+      .tourists-say-info {
+        padding-left: 3.75rem;
       }
     }
   }

@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-rock-60.png" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>Bhromaon</title>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                     <svg>
                         <use href="images/sprite.svg#svg-search" />
                     </svg>
-                    Search
+                    <span>Search</span>
                 </button>
             </div>
             <div>
@@ -38,10 +39,27 @@
         </div>
     </section>
     <header>
-        <div>
+        <div class="alignment-helper"></div>
+        <div class="logo">
             <p>Bhromaon</p>
         </div>
         <div>
+            <input type="checkbox" id="dropdown">
+            <div class="hamburger">
+                <label for="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="burger" width="40" height="24" viewBox="0 0 40 24"
+                        fill="none">
+                        <rect width="40" height="2" fill="white" />
+                        <rect y="11" width="40" height="2" fill="white" />
+                        <rect y="22" width="40" height="2" fill="white" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-x" width="31" height="30" viewBox="0 0 31 30"
+                        fill="none">
+                        <rect x="2" width="40" height="2" transform="rotate(45 2 0)" fill="white" />
+                        <rect x="1" y="28.2842" width="40" height="2" transform="rotate(-45 1 28.2842)" fill="white" />
+                    </svg>
+                </label>
+            </div>
             <nav>
                 <ul>
                     <li>Who We Are</li>
@@ -71,33 +89,33 @@
                     <img src="images/mountains.png" alt="mountains">
                 </div>
             </div>
-            <div class="bg-color-container">
-                <div class="transition-icons-container">
-                    <img src="images/line.svg" alt="line">
-                    <div>
-                        <div class="circle">
-                            <svg>
-                                <use href="images/sprite.svg#svg-search" />
-                            </svg>
-                        </div>
-                        <h2>Search Places</h2>
+        </section>
+        <section class="bg-color-container">
+            <div class="transition-icons-container">
+                <img src="images/line.svg" alt="line">
+                <div>
+                    <div class="circle">
+                        <svg>
+                            <use href="images/sprite.svg#svg-search" />
+                        </svg>
                     </div>
-                    <div>
-                        <div class="circle">
-                            <svg>
-                                <use href="images/sprite.svg#svg-check-circle" />
-                            </svg>
-                        </div>
-                        <h2>Select Places</h2>
+                    <h2>Search Places</h2>
+                </div>
+                <div>
+                    <div class="circle">
+                        <svg>
+                            <use href="images/sprite.svg#svg-check-circle" />
+                        </svg>
                     </div>
-                    <div>
-                        <div class="circle">
-                            <svg>
-                                <use href="images/sprite.svg#svg-thumbs-up" />
-                            </svg>
-                        </div>
-                        <h2>Book & Enjoy</h2>
+                    <h2>Select Places</h2>
+                </div>
+                <div>
+                    <div class="circle">
+                        <svg>
+                            <use href="images/sprite.svg#svg-thumbs-up" />
+                        </svg>
                     </div>
+                    <h2>Book & Enjoy</h2>
                 </div>
             </div>
         </section>

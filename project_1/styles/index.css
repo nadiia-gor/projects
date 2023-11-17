@@ -36,12 +36,23 @@ footer .icons-container, .tourists-say .tourists-say-container, .transition-icon
   line-height: 1.25rem;
   font-weight: 400;
   color: #fff;
-  margin-top: 1rem;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 body {
   color: #fff;
-  overflow-x: hidden;
+}
+
+#dropdown {
+  display: none;
+}
+
+.alignment-helper {
+  display: none;
+  visibility: none;
+  width: 40px;
 }
 
 section,
@@ -95,7 +106,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 50%;
+  width: 60%;
   margin-bottom: 13.188rem;
 }
 .section-heading-container div:nth-of-type(2) input {
@@ -157,12 +168,18 @@ header {
   line-height: 1.25rem;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .section-heading-container div:nth-of-type(2) button svg {
   width: 16px;
   height: 16px;
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+.section-heading-container div:nth-of-type(2) button:hover {
+  background-color: #9eb0fd;
+  border: 1px solid #9eb0fd;
 }
 .section-heading-container div:nth-of-type(3) {
   margin-bottom: 7.5rem;
@@ -222,6 +239,16 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+header .hamburger {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+header .hamburger input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 header p {
   font-family: "Josefin Sans";
   font-size: 1.5rem;
@@ -243,6 +270,24 @@ header ul li {
   line-height: 1.25rem;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+header ul li::after {
+  content: "";
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  width: 70%;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header ul li:hover::after {
+  display: block;
 }
 
 .why-choose {
@@ -251,6 +296,10 @@ header ul li {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 7.75rem;
+}
+.why-choose button:hover {
+  background-color: #9eb0fd;
+  border: 1px solid #9eb0fd;
 }
 .why-choose h2 {
   font-family: "Aleo";
@@ -292,8 +341,9 @@ header ul li {
 
 .bg-color-container {
   background-color: #333333;
-  margin: 0 -9999rem;
-  padding: 0 9999rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .transition-icons-container {
@@ -308,6 +358,10 @@ header ul li {
           align-items: center;
 }
 .transition-icons-container h2 {
+  font-family: "Aleo";
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.5rem;
   margin-top: 0.25rem;
 }
 .transition-icons-container svg {
@@ -392,7 +446,11 @@ header ul li {
   letter-spacing: 1.6px;
 }
 .spain-1 div button {
-  margin: 0.5rem;
+  margin-top: 1rem;
+}
+.spain-1 div button:hover {
+  background-color: #9eb0fd;
+  border: 1px solid #9eb0fd;
 }
 
 .spain-2 {
@@ -437,7 +495,11 @@ header ul li {
   letter-spacing: 1.6px;
 }
 .spain-2 div button {
-  margin: 0.5rem;
+  margin-top: 1rem;
+}
+.spain-2 div button:hover {
+  background-color: #9eb0fd;
+  border: 1px solid #9eb0fd;
 }
 
 .tourists-say {
@@ -460,8 +522,12 @@ header ul li {
 }
 .tourists-say .tourists-say-container {
   gap: 3.75rem;
-  height: 17.5rem;
+  min-height: 17.5rem;
   background-color: #333333;
+}
+.tourists-say .tourists-say-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tourists-say .tourists-say-info {
   padding: 3rem 4.063rem 3rem 0;
@@ -552,7 +618,7 @@ footer .icons-container svg:hover {
           filter: invert(45%) sepia(42%) saturate(5721%) hue-rotate(216deg) brightness(102%) contrast(98%);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
   section,
   header {
     padding-left: 6.875rem;
@@ -560,15 +626,11 @@ footer .icons-container svg:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .section-heading-container h1 {
-    margin-top: 13.5rem;
-  }
   .section-heading-container h4 {
     margin-bottom: 2.5rem;
   }
   .section-heading-container div:nth-of-type(2) {
-    width: 55%;
-    margin-bottom: 10.5rem;
+    width: 60%;
   }
   .section-heading-container div:nth-of-type(3) {
     margin-bottom: 6rem;
@@ -576,8 +638,12 @@ footer .icons-container svg:hover {
   .why-choose-container {
     gap: 7.563rem;
   }
+  .spain-1 div button,
+  .spain-2 div button {
+    margin-top: 0.5rem;
+  }
   .tourists-say .tourists-say-container {
-    height: 18.75rem;
+    height: 19.25rem;
   }
   .tourists-say .tourists-say-container img {
     width: 35%;
@@ -597,7 +663,7 @@ footer .icons-container svg:hover {
             box-sizing: border-box;
   }
   .section-heading-container div:nth-of-type(2) {
-    width: 70%;
+    width: 60%;
   }
   .why-choose-container {
     gap: 1.313rem;
@@ -605,12 +671,297 @@ footer .icons-container svg:hover {
   .why-choose-container div:first-of-type {
     width: 100%;
   }
-  .why-choose-container .bg-color-container {
-    margin: 0 -64rem;
-    padding: 0 64rem;
-  }
   .transition-icons-container .circle h2 {
     margin-left: 1.875rem;
     margin-right: 1.875rem;
+  }
+  .spain-1 div button,
+  .spain-2 div button {
+    margin-top: 0.5rem;
+  }
+  .tourists-say .tourists-say-container {
+    height: 21rem;
+  }
+  .tourists-say .tourists-say-container img {
+    width: 34%;
+  }
+  .tourists-say .tourists-say-container .tourists-say-info {
+    padding-right: 3.75rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  section,
+  header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .section-heading-container div:nth-of-type(2) {
+    width: 90%;
+  }
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8.5rem;
+  }
+  header ul {
+    padding-left: 0;
+  }
+  .why-choose {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  .why-choose-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .why-choose-container div:first-of-type {
+    text-align: center;
+    width: 100%;
+  }
+  .why-choose-container div:first-of-type p:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+  .why-choose-container h2 {
+    margin-top: 0;
+  }
+  .why-choose-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0;
+    gap: 1.5rem;
+  }
+  .why-choose-images img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    min-width: 0%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .why-choose-images img:last-of-type {
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  .bg-color-container .transition-icons-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3.75rem;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  .bg-color-container .transition-icons-container img {
+    display: none;
+  }
+  .bg-color-container .transition-icons-container h2 {
+    margin-bottom: 0;
+  }
+  .spain-1 div,
+  .spain-2 div {
+    width: 91%;
+  }
+  .tourists-say {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+  }
+  .tourists-say .tourists-say-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .tourists-say .tourists-say-container img {
+    max-height: 21rem;
+  }
+  .tourists-say .tourists-say-container .tourists-say-info {
+    padding-left: 3.75rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  section,
+  header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  span {
+    display: none;
+  }
+  .section-heading-container div:nth-of-type(2) {
+    width: 90%;
+  }
+  .alignment-helper {
+    display: block;
+  }
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 5.25rem;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav {
+    display: none;
+    background-color: #5373fd;
+    position: absolute;
+    top: 5.25rem;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    text-align: center;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+    padding-bottom: 2rem;
+  }
+  header nav ul {
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .hamburger {
+    display: block;
+  }
+  header .icon-x {
+    display: none;
+  }
+  header div:nth-child(3) > input:checked ~ div.hamburger > label > .burger {
+    margin-top: 1rem;
+    height: 8.25rem;
+    display: none;
+  }
+  header div:nth-child(3) > input:checked ~ .hamburger > label > .icon-x {
+    display: inline-block;
+  }
+  header div:nth-child(3) > input:checked ~ nav {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .why-choose {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  .why-choose-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .why-choose-container div:first-of-type {
+    text-align: center;
+    width: 100%;
+  }
+  .why-choose-container div:first-of-type p:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+  .why-choose-container h2 {
+    margin-top: 0;
+  }
+  .why-choose-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0;
+    gap: 1.5rem;
+  }
+  .why-choose-images img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    min-width: 0%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .why-choose-images img:last-of-type {
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  .bg-color-container .transition-icons-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3.75rem;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  .bg-color-container .transition-icons-container img {
+    display: none;
+  }
+  .bg-color-container .transition-icons-container h2 {
+    margin-bottom: 0;
+  }
+  .spain-1 div,
+  .spain-2 div {
+    width: initial;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tourists-say {
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+  }
+  .tourists-say .tourists-say-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .tourists-say .tourists-say-container img {
+    max-height: 21rem;
+  }
+  .tourists-say .tourists-say-container .tourists-say-info {
+    padding-left: 3.75rem;
   }
 }
